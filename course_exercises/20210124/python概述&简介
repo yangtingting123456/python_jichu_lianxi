@@ -1,0 +1,60 @@
+                                     苦背语法，勤敲代码
+            python之父
+python的作者，Guido von Rossum,荷兰人。
+目前在微软上班
+最开始叫ABC语言，（注意：不能使用abc作为py文件的文件命令）
+是一门教学语言
+为啥叫python：纪念一部肥皂剧
+最开始使用mac编写，mac默认有2.7的版本呢，2.7之后的
+python即面向过程又面向对象的语言，可以使用c语言的一些库。
+流行的语言又：java，php，c，c#，javascrip，c++，VB，使用最高的是java
+
+             python简介
+python使用率不是很高，python是一种工具语言，开发很多小工具
+python特点：简单，易学，但并不代码简单。
+python为我们提供非常完善的基础代码库，覆盖了网络，文件，GUI，数据库，文本等大量内容，被形象称为：“内置电池”
+python语法简单，功能强大，具有丰富的类库。
+python不像java一样对内存要求很高，适合
+             python可以用来做什么
+爬虫，数据分析，自动化测试
+
+              python版本介绍
+2.X的版本不支持3.X的版本
+
+              python下载与安装
+添加python环境变量
+window检验python的版本，cmd输入python
+手动添加尽量添加到系统变量中
+系统变量：可以给系统的所有的用户使用
+用户变量：仅当前用户可用
+
+              Pycharm 安装
+pycharm安装
+PyCharm是一种python IDE,带有一整套可以版主用户在使用python语言开发时，提高效率的工具，比如调试，语法高亮，project管理，
+代码跳转，智能提示，自动完成，单元测试，版本控制。
+Pycharm官网：http://www.jetbrains.com/pycharm/download
+Pycharm 分为Professional版本和Community版本，professional版本为收费版本，提供试用30天
+建议：Pycham不建议汉化，不要把代码放到python的安装路径，整个路径下不要使用中文。
+手动选择python的编译路径
+包名：不要使用中文
+
+        PVM介绍
+python代码执行过程：加载代码文件-》字节码文件（生成.pyc文件）-》解释器展示
+python代码的后缀：.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
