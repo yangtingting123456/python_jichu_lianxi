@@ -62,6 +62,7 @@ print(s1.replace('e','U'))
 eg：浮点数格式输出
 t=1.888388
 print('今天读书%06.2f小时')   #浮点数默认输出六为小数，.2表示只输出两位小数， %6表示占用的宽度，占用的宽度用0表示，在6的前面加0
+
 列表（list）：其它开发语言中跟我们列表中有一点相同，1.数据类型必须一致。  2.数组的长度必须规定好
 特点：python列表中是python中最复杂的数据类型，可以定义一种或多种数据类型，也可以在列表中嵌套列表。
 定义：变量名 = [数值1，数值2...]
@@ -85,12 +86,94 @@ L.index(var) # 该元素的位置，无则抛异常
 L.extend(var) # 追加list，即合并list到L上
 L.sort() #排序
 L.reverse() # 反转
-元组：
+eg：b = ['a',2,(2,3,5),['b',2,3]]
+# L.append(var) # 追加元素
+b.append('hello word')
+print(b)
+# L.insert(index,var) # 在指定位置插入元素
+b.insert(2,999)
+print(b)
+# L.pop(var) # 返回最后一个元素，并从list中删除，也可以删除指定位置的元素
+b.pop(2)
+print(b)
+# L.remove(ver) # 删除第一次出现的元素
+b.remove('a')
+print(b)
+# L.count(var) # 该元素在列表中出现的位置
+print(b.count(2))
+# L.index(var) # 该元素第一次出现的位置，无则抛异常
+print(b.index(2))
+# # L.extend(var) # 追加list，即合并list到L上
+u = ['I' ,'Love', 'You']
+b.extend(u)
+print(b)
+# L.sort() #排序
+i= [4,2,1,6,6,2,9,6]
+i.sort(reverse=False)  #降序reverse=False
+print(i)
+# L.reverse() # 反转
+u = [2,3,20]
+u.reverse()
+print(u)
+list的复制
+L1 = L  #将L1为L的别名，用C来说就是指针地址相同，对L1操作即对L操作。函数参数就是这样
+L1 = L[:]  #L1为L的克隆，即另一个拷贝
+list01 = list02   #地址传递
+print(id(list01))
+print(id(lsit01))  #list01he list02的地址相同
+list03 = list02[:]   #值传递
+print(id(lsit03))
+print(id(lsit02))   #list02和list03在内存的地址不一样
+对list02的值进行改变，list03的值不变，list01也多了一个值，
+即地址传递，改变一个列表，列表的值也会改变，值传递，改变一个列表，另外一个列表不会改变
 
+tuple(元组)：类似list(列表)的另外类型。
+特点：不可变，元组是一个只读的列表，一旦定义就无法修改了，它使用()进行定义。
+元组切换和索引和list(列表)一致的，也可以进行重复和拼接的        如：订单号
+使用的函数有：count(),index()....
+eg： order_no = ('867890','3423')
 
-字典：
+sets(集合):用{}进行定义
+特定：无序，元素不可重复,不能重复，拼接，索引和切片，集合是进行计算的，并集，交集，差集
+eg：set01 = {‘aa’,‘bb’}
+集合可以进行的操作
+a= {1,2,3,5,'c','s'}
+b = {3,5,2,2,1,'j'}
+print(a-b)  #差集，只返回第一个集合存在的，但不在第二个集合中的
+print(a&b)  #交集,返回两个集合同共同的元素
+print(a|b)   #并集,将连个集合中合并去重输出
+print(a^b)  #交集的补集，返回两个集合的补集
+print('a' in a )  #判断某个元素在不在某个集合中
 
+dictionary(字典)：键值对存在内存中，如：手机号，学号....
+定义：方法一：dict01 = {key01:value01,key02:value02,key03:value03....}
+     方法二：使用dict进行定义，dict02 = dict{name = 'ytt',age = 24},键名不能重复
+     方法三：dict03 = dict((['nanme','ytt'],['age',23]))
+     方法四：使用内置函数：
+     lsit01 = [1,2,3,4]
+     dict04 = dict.fromkeys(lsit01,'hello')
+     不能索引和切片
+如何改变字典的值：
+a = {'name':'ytt','age':27}
+b = {'salary':2999}
+a['age'] = 26
+如果key存在则值改变，key不存在增加key和value的值
+print(a.get('name'))  #通过get()函数获取字典中的某个key的值
+print(a.keys())  #获取列表的所有的key
+print(a.values())  #获取字典中共key对应的所有值
+print(a.pop('name',default = 'sorry,键名不存在')) #删除字典中的值，当删除的key不存在时候，则抛出异常，删除之后，再将值返
+print(a.update(b))  #更新字典，将两个字典进行合并，有则覆盖，没有则添加
+a.clear()  #将字典a中的元素清空
+del a #将字典a删除
 
+数据类型转换：
+1.两种类型之间相互兼容，目标类型大于源类型可以相互转换
+#布尔+整型   布尔
+#布尔+浮点  浮点
+#整型+浮点   浮点
+
+不可变的数据类型有四个：number（数字）,Sting(字符串),Tuple(元组),sets(集合)
+可变的数据类型有两个：list(列表),dictionary(字典)
 如何查看数据的类型：print(type(变量名称))
 
                         python 输入，输出语句
@@ -100,8 +183,5 @@ L.reverse() # 反转
 
 
                         python 流程控制语句
-
-
-
 
 
