@@ -1,0 +1,77 @@
+        if
+if语句嵌套
+eg：比较两个数的大小，输出最大值，如果两数相等，则提示相等，否则就输出最大的那个数
+a = int(input('请输入第一个数：'))
+b = int(input('请输入第二个数：'))
+if a==b :
+   print('两数相等')
+else：
+   if a>b:
+       print('两数较大的是：',a)
+   else:
+       print('两数较大的是：',b)
+#python里面是没有switch语句的
+
+       python 循环语句
+       while：无do...while语句结构
+while 表达式：
+      [缩进] 语句块
+else:
+      [缩进] 语句块
+eg：输入五个*号
+i=0
+while i <5:
+      print('*',end = '\t')
+      i + = 1
+#循环的四个条件：起始值，循环体，结束值，步长
+#循环也是可以嵌套的：
+while 表达式：
+     while 表达式：
+           [缩进]  循环体
+     else：
+           [缩进]执行语句
+else：
+     [缩进]执行语句
+#要输输入5行，每一行五个*号
+row = 0
+while row <= 5:
+    count = 0
+    while count <= 5:
+        print("*", end='\t')
+        count = count+1
+    else:
+        print('\n')
+    row = row + 1
+#循环里面可以嵌套if语句
+
+
+        for
+#1.for 两个作用
+‘’‘
+range() 函数的作用是：生成数字序列
+rang() 函数有三个参数，1-起始值。  2-结束值 3-步长，也可以写两个参数，起始值和结束值，默认步长是1。
+       [缩进]循环体
+’‘’
+eg:打印一行5个*号
+for i in range(0,5,1):   #输入5个型号
+    print("*" , end = '\t')
+
+#for  循环也可以嵌套
+for i in range(0,5):
+     for j in range(0,5):
+         print("*" , end = '\t')
+     else:
+         print("/n")
+
+# 打印九九乘法表, i:控制行    j：控制列
+for i in range(1,10):
+    for j in range(1,i+1):
+        print('%d*%d=%d' % (j,i,i*j),end='\t')
+    print('\t')
+#打印金字塔
+num=int(input())
+for i in range(1,num+1):
+    print(' '*(num-i)+'*'*(2*i-1))
+for 循环也可以生成列表
+eg： list01 = list(x for x in range(1,10))
+     print(list01)

@@ -175,10 +175,3 @@ del a #将字典a删除
 不可变的数据类型有四个：number（数字）,Sting(字符串),Tuple(元组),sets(集合)
 可变的数据类型有两个：list(列表),dictionary(字典)
 如何查看数据的类型：print(type(变量名称))
-
-                        python 输入，输出语句
-
-
-
-
-
