@@ -8,7 +8,7 @@ eg1: str = 'hello world'
 eg2: list01 = [1,2,3,'ss',(2,3),{'name':'ytt'}]
      for i in list01:
          print(i)
-     或
+     或者
      for i in range(0,len(list01)):
          print(i)
 eg3:dict01 = {"name":"ytt","age":18}
