@@ -69,7 +69,7 @@ print(__file__)  #打印当前文件的路径
 
 局部作用域>嵌套作用域>全局作用域>内置作用域
 
-函数参数：缺省参数，默认参数，关键字参数，必备参数
+函数参数：缺省参数（默认参数），关键字参数，必备参数，任意参数
 1，必备参数：传参的顺序和个数不能变
 def info(name,age)
     print('我叫%s，今年%d岁'%(name,age))
@@ -88,8 +88,26 @@ def info(name='小红',age)
     print('我叫%s，今年%d岁'%(name,age))
 info(age=23)
 
-4.默认参数
+4.任意个参数
+* 表示将没有匹配的值都放在同一个元组职工
+* *   表示将没有匹配的值都放在一个dictionary中
+eg:  def pri(name,*test_tuple):
+         print(name)
+         print(test_tuple,type(test_tuple))
 
+     pri('张三','it','长沙',60)
+
+     输出: 张三
+          (20,'it','长沙',60)  <class 'tuple'>
+
+    def pri(name,**test_tuple):
+             print(name)
+             print(test_tuple,type(test_tuple))
+
+         pri('张三',dic='it',address='长沙',age=60)   #后面的多个值必须以字典的实参传递给形参
+
+         输出: 张三
+              (20,'it','长沙',60)  <class 'tuple'>
 
 
 
