@@ -1,0 +1,27 @@
+  for循环的作用：遍历列表，字符串，字典
+eg1: str = 'hello world'
+    for i in str:
+        print(i)
+    或
+    for i in range(0,len(str)):
+        print(str[i])
+eg2: list01 = [1,2,3,'ss',(2,3),{'name':'ytt'}]
+     for i in list01:
+         print(i)
+     或者
+     for i in range(0,len(list01)):
+         print(i)
+eg3:dict01 = {"name":"ytt","age":18}
+#遍历字典，字典函数get()----通过键获取值
+    for key,value in dict01.items():
+        print(key,value)
+
+   break 和 continue
+continue：用来告诉跳过当前循环的剩余语句，然后继续进行下一轮循环，用在while和for循环中。    ----结束本次循环，继续进行下一次循环
+break:用来终止循环语句，即循环条件没有False条件，或者序列还没被完全递归完，也会停止执行循环语句，break语句用在for和while
+循环循环中。
+   如果使用嵌套循环，break语句将停止执行最深层的循环，并开始执行下一行代码     -----结束本层循环
+pass:空语句，维护程序的完整性。
+
+
+
