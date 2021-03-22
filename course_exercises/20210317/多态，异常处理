@@ -1,0 +1,145 @@
+多态：同一类事物表现出来的不同形态。
+前提：必须有继承。
+多态性：指具有不同功能的函数可以使用形同的函数名
+eg：# 父类：文件
+# 子类：txt文件---双击 开开txt文档
+#     exe程序  --双击 安装软件
+#     MP4视频 --双击  播放视频
+
+from  abc import abstractmethod,ABCMeta
+class Double_File(metaclass=ABCMeta): #抽象父类
+    @abstractmethod
+    def double_click(self):
+        pass
+#实现多态
+class Double_Txt(Double_File):
+    def double_click(self):
+        print('双击txt文件,打开txt文件')
+
+class Double_exe(Double_File):
+    def double_click(self):
+        print('双击exe文件,安装文件')
+
+class Double_Mp4(Double_File):
+    def double_click(self):
+        print('双击mp4文件,视频播放')
+
+#传入不同的文件类型，实现多态性
+def double_click(file_obj):
+    file_obj.double_click()
+
+#调用实现多态性
+txt = Double_Txt()
+double_click(txt)
+
+exe = Double_exe()
+double_click(exe)
+
+mp4 = Double_Mp4()
+double_click(mp4)
+
+        python 异常处理基本概念
+异常处理：异常处理，是编程语言或计算机硬件里的一种机制，用于处理软件或信息系统出现的异常状况，如：文件找不到，网络连接失败等，异常就是一个事件，
+它发现在程序运行期间，告饶了正常的指令流程。
+一般情况下，在python无法正常处理程序时就会发生一个异常，异常是python中的对象，表示一个错误，当python脚本发生异常时我们需要捕获处理它，否则程序就会终止
+执行。
+在python中，异常也是对象，课对它进行操作，所有异常都是基类exceptionde的成员。所有异常都是从基类Exception继承，而且都是在exception模块中定义，python
+自动将所有异常名称放在内建命名空间中，所以程序不必导入exception模块中定义。python自动将所有异常名称放在内建命名空间中，所以程序不必导入exceptions
+模块即可使用异常。
+捕获异常可以使用try/except语句
+try/except语句用来检测try语句块中错误，从而让except语句捕获异常信息并处理。如果你不想在异常时发生时结束程序，只需在try中捕获它。
+异常处理：处理软件或信息系统出现的异常状况
+语法:try...except...else...finally
+# 异常处理：处理软件或信息系统出现的异常状况
+# 语法:try...except...else...finally
+lista= [2,3,5]
+try:  #监控下面可能出现错误的代码
+    num=int(input('请输入下标：'))
+    print(lista[num])
+except IndexError as e: #多上面出错的代码进行处理
+    print(e)
+    print('下标越界')
+except ValueError as e: #输入的值错误，进行错误
+    print(e)
+    print('输入的值错误')
+except Exception as e:
+    print(e)
+else:
+    print('未报错，执行语句')
+finally:
+    print('不管是否出错，都会执行')
+
+print('异常处理之后运行')
+
+        python 异常处理实现
+# 异常分类：
+# 1.系统异常：下标越界、值错误、路径错误。。。。
+try:
+    print('good good study,every every up')
+    raise IndexError('我是下标越界错误!!!')#创建了一个错误对象
+except IndexError as e:
+    print(e)
+print('good good study,every every up')
+
+
+
+        python 自定义异常处理
+# 2.业务异常：充值只能是正数值、年龄范围1-120，账号密码错误。。。
+#触发异常,由raise关键字触发的，只亚欧有raise就会报错
+# eg：允许充值的范围0-100之间
+#自定义一个业务异常类
+class OnlyInputValue(Exception):
+    def __str__(self):
+        return '输入的充值范围只能是0-100之间的数字'
+
+try:
+    num = int(input('请输入0-100之间的数字：'))
+    if num<0 or num>100:
+        #手动触发异常
+        raise OnlyInputValue()
+    else:
+        print('你输入的数是：{}'.format(num))
+except OnlyInputValue as e:
+    print(e)
+
+except Exception as e:
+    print(e)
+    print('系统未知错误')
+
+        python 标准异常列表
+异常表1：
+BaseException:所有异常的基类
+SystemExit:解释器请求退出
+KeyboardInterrupt:用户中断执行
+Exception:常规错误的基类
+StopIteration:迭代器没有更多的值
+GeneratorExit:生成器（generator）发生异常来通知退出
+SystemExit:python解释器请求退出
+StandardError:所有的内建标准异常的基类
+ArithmeticError：所有数值计算错误的基类
+FloatingPointError:浮点计算错误
+OverFlowError：数值运算超出最大限制
+ZeroDivisionError:除（或取模）零（所有数据类型）
+AssertionError:断言失败
+AttributeError:对象
+
+python标准异常二：
+IOError: 输入/输入操作失败
+OSError:操作系统错误
+WindowsError:系统调用错误
+ImportError:导入对象/模块失败
+KeyboardInterrupt:用户中断执行
+LookupError:无效数据查询的基类
+IndexErrror:序列中没有此索引
+KeyError:映射中没有这个键
+SyntaxError:python语法错误
+MemoryError:内存溢出错误
+SystemError:一般的解释器系统错误
+IndentationError:缩进错误
+ValueError:传入的值错误
+TypeError:类型错误
+
+
+
+
+
