@@ -1,1 +1,8 @@
-
+2021-03-23 17:38:52,791 - python_log.py - 23 - INFO - 人生
+2021-03-23 17:39:09,736 - python_log.py - 23 - INFO - 人生
+2021-03-23 17:40:01,902 - python_log.py - 23 - INFO - 人生
+2021-03-23 17:40:01,902 - python_log.py - 24 - ERROR - error
+2021-03-23 17:40:01,902 - python_log.py - 26 - WARNING - warning
+2021-03-23 17:49:26,408 - python_log.py - 23 - INFO - 人生
+2021-03-23 17:49:26,408 - python_log.py - 24 - ERROR - error
+2021-03-23 17:49:26,408 - python_log.py - 26 - WARNING - warning

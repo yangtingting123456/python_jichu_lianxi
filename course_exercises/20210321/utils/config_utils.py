@@ -13,7 +13,10 @@ class ConfigUtils:
         return self.conf.get('default','excel_path')
     def get_config_path(self):
         return self.conf.get('default','config_path')
+    def get_log_path(self):
+        return self.conf.get('default','log_path')
 conf = ConfigUtils()
 if __name__ == '__main__':
     print(conf.get_excel_path())
     print(conf.get_config_path())
+    print(conf.get_log_path())
