@@ -7,12 +7,12 @@ class ReadExcel:
     # 读取excel中的数据制作成列表，对象的封装
     def read_excel_list(self):
         WorkBook = xlrd.open_workbook(self.excel_path)
-        sheet01 = WorkBook.sheet_by_name(self.sheet_name)
+        sheet = WorkBook.sheet_by_name(self.sheet_name)
         all_student_info = []
-        for i in range(1, sheet01.nrows):  # 总行
+        for i in range(1, sheet.nrows):  # 总行
             row_student_info = []
-            for j in range(sheet01.ncols):  # 总列
-                row_student_info.append(sheet01.cell_value(i, j))
+            for j in range(sheet.ncols):  # 总列
+                row_student_info.append(sheet.cell_value(i, j))
             all_student_info.append(row_student_info)
         return all_student_info
     # 2.对象的封装
@@ -28,7 +28,7 @@ class ReadExcel:
                                                       sheet.cell_value(i, 4))
             all_student_obj.append(students)
         return all_student_obj
-#测试
+#测试类
 if __name__ == '__main__':
     current_path = os.path.dirname(__file__)
     excel_path = os.path.join(current_path, 'data/StudentInfo.xlsx')
