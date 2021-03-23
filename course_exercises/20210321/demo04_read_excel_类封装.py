@@ -1,7 +1,6 @@
 import os,xlrd
 import StudentBaseInfo
-from utils.config_utils import ConfigUtils
-config = ConfigUtils()
+from utils.config_utils import conf
 class ReadExcel:
     def __init__(self,excel_path,sheet_name):
         self.excel_path = excel_path
@@ -33,7 +32,7 @@ class ReadExcel:
 #测试类
 if __name__ == '__main__':
     current_path = os.path.dirname(__file__)
-    excel_path = os.path.join(current_path, config.get_excel_path())
+    excel_path = os.path.join(current_path, conf.get_excel_path())
     RD_excel = ReadExcel(excel_path,'StudentInfo')
     print(RD_excel.read_excel_list())
     for i in range(len(RD_excel.read_excel_obj())):

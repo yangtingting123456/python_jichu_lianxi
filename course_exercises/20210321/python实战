@@ -171,6 +171,26 @@ print('获取某个组中的内容：',conf.items('default'))
 print('获取某个组中对应的值：',conf.get('default','excel_path'))
 print('获取某个组下所有的key：',conf.options('default'))
 
+读取配置文件的封装
+#读取配置文件工具包
+import os
+import configparser
+current_path = os.path.dirname(__file__)
+conf_path = os.path.join(current_path,'../conf/config.ini')
+class ConfigUtils:
+    def __init__(self,config_path = conf_path):
+        self.config_path = config_path
+        self.conf = configparser.ConfigParser()
+        self.conf.read(self.config_path,encoding='utf-8')
+
+    def get_excel_path(self):
+        return self.conf.get('default','excel_path')
+    def get_config_path(self):
+        return self.conf.get('default','config_path')
+conf = ConfigUtils()
+if __name__ == '__main__':
+    print(conf.get_excel_path())
+    print(conf.get_config_path())
 
 6.异常处理的使用
         try:
