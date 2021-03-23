@@ -163,6 +163,12 @@ if __name__ == '__main__':
 
 
 6.异常处理的使用
-
+        try:
+            WorkBook = xlrd.open_workbook(self.excel_path)
+        except FileNotFoundError as  e:
+            print('文件路径不存在，系统自动给默认路径')
+            current_path = os.path.dirname(__file__)
+            excel_path1 = os.path.join(current_path, 'data/StudentInfo.xlsx')
+            WorkBook = xlrd.open_workbook(excel_path1)
 
 
