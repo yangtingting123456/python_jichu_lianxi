@@ -34,11 +34,11 @@ all_student_obj=[]
 #-----方法1：获取每个单元格然后赋值
 #-----方法2：循环获取保存
 for i in range(1,sheet.nrows):
-    students = StudentBaseInfo.StudentBaseInf(sheet.cell_value(i,0),
-                               sheet.cell_value(i,1),
-                               sheet.cell_value(i,2),
-                               sheet.cell_value(i,3),
-                               sheet.cell_value(i,4))
+    students = StudentBaseInfo.StudentBaseInf(sheet.cell_value(i, 0),
+                                              sheet.cell_value(i,1),
+                                              sheet.cell_value(i,2),
+                                              sheet.cell_value(i,3),
+                                              sheet.cell_value(i,4))
     all_student_obj.append(students)
 
 for i in range(len(all_student_obj)):
