@@ -12,6 +12,7 @@ cursor.execute(sql)
 result = cursor.fetchone()
 print(result)
 connection.close()
+
 # 2.2 python实现发送邮件
 import smtplib
 from email.mime.text import MIMEText
@@ -44,3 +45,6 @@ if ret:
     print("邮件发送成功")
 else:
     print("邮件发送失败")
+
+
+
