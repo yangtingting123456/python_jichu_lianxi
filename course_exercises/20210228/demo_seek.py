@@ -7,6 +7,6 @@ print(file_txt.read(3))
 print(file_txt.tell()) #获取当前文件的位置
 #0表示从文件的开头，1表示从文件的当前位置，2表示文件末尾
 #在文件中没有使用二进制模式（b）打开文件，那么只允许从文件的起始位置即使算相对位置产生位移。
-file_txt.seek(-1,2)  #产生位移
-print(file_txt.read(3))
+file_txt.seek(0,0)  #产生位移
+print(file_txt.read(10))
 file_txt.close()
