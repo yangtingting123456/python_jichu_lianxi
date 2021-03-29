@@ -1,2 +1,3 @@
-好好学习，天天向上
-this is demo01 file
+Write txt content is 
+ Hi,hello worldAre you OK? 
+ Hi,hello world
