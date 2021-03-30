@@ -15,3 +15,26 @@ print(zhangsan.age)
 print(zhangsan.sex)
 运行结果：sex和age正常打印出来，属性name报错，要想活得name需要定义get和set方法
 
+类的三大特性：封装，继承，多态
+在类的外部访问方法：实例.__类名__方法名()
+zhangsan.__people__info() #__info()是私有方法
+
+super() #超类
+super().__init__(name,age,sex)   #方法一
+People.super().__init(self,name,age,sex)   #方法二
+super(student.self).__init__(name,age,sex)  #方法三
+#子类重写父类的方法，执行方法时先会在自身类中查找，没有找到则取父类中查找
+#子类继承父类的共有的属性和方法。
+#多继承，一个子类可以有多个父类，多个父类之间使用逗号隔开。
+
+
+
+
+
+
+
+
+
+
+
+
