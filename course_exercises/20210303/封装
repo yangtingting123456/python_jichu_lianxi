@@ -1,3 +1,17 @@
 数据封装，方法封装
-封装：
+封装：只看到功能，看不到内部结构是如果实现的
+cless People:
+      def __init__(self,name,age,sex):
+          self.__name = name  #私有属性
+          self.age = age
+          self.sex = sex
+      def __set_Name(self,name):  #私有方法
+          self.__name = name
+      def get_name(self):
+          return self.__name
+zhangsan = People('zhangsan',18,'女')
+print(zhangsan.name)
+print(zhangsan.age)
+print(zhangsan.sex)
+运行结果：sex和age正常打印出来，属性name报错，要想活得name需要定义get和set方法
 
