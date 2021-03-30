@@ -1,0 +1,12 @@
+内置方法：
+1.__ini__(self)  #构造方法：构造方法系统会默认调用，支持重载，但是系统会默认调用最后一个构造方法。
+2.__del__(self)  #析构方法：作用是释放资源，系统默认调用
+del zhangtao
+3.__str__(self)  #自定义输出方法
+eg:def __str__(self):
+       return '我是自定义方法。'
+4.__add__(self)  #两个实例的加法操作（实例对象属性值的加法操作）
+eg: def __add__(self):
+        return self.age + other.age
+
+   print(zhangsan+lisi)
