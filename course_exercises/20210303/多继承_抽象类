@@ -1,0 +1,16 @@
+多继承：一个子类有多个父类，1，只能继承父类的共有属性和方法。  2.当子类和父类都有某个方法的时候，优先调用子类的方法
+抽象类：抽象类包含抽象方法，抽象类定义不实现，抽象类能被继承，要有抽象类的定义语句
+没有被继承，要么被继承，要么实现
+from abc import ABCmeta,abstractmethod
+class animal(__metaclass__ABCmeta):
+      #定义抽类
+      def __init__(self,name):
+          self.name = name
+      #abcstractmethod
+      def say(self):
+          pass
+class Dog(animal):
+      def __init__(self):
+          super(). __init__(self.name)
+      def say(self):
+           return 'this is a say def..'
