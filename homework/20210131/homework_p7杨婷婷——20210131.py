@@ -63,34 +63,34 @@
 
 # 5、模拟支付宝的蚂蚁森林通过日常的走步--20g，生活缴费--50g，线下支付--100g，网络购票--80g，共享单车--200g等低碳，环保行为可以积攒能量，
 # 当能量达到一定数量后，可以种一棵真正的树--500g。由用户输入环保行为，来积累能量；查询能量请输入能量来源！退出程序请输入0。
-print("---------- 0.推出程序。 ----------")
-print("---------- 1.日常的走步--20g。 ----------")
-print("---------- 2.生活缴费--50g。 ----------")
-print("---------- 3.线下支付--100g。 ----------")
-print("---------- 4.网络购票--80g 。 ----------")
-print("---------- 5.共享单车--200g。 ----------")
-print("--------------------------------------")
-
-count_emergy = 0
-
-while(count_emergy>=0):
-    emergy = int(input("你输入你的环保行为："))
-    if emergy == 1:
-        count_emergy = count_emergy + 20
-    elif emergy == 2:
-        count_emergy += 50
-    elif emergy == 3:
-        count_emergy += 100
-    elif emergy == 4:
-        count_emergy += 80
-    elif emergy == 5:
-        count_emergy += 200
-    elif emergy==0:
-        break;
-
-if count_emergy >=500:
-   print("恭喜你，你成功种了一棵树")
-print(count_emergy)
+# print("---------- 0.推出程序。 ----------")
+# print("---------- 1.日常的走步--20g。 ----------")
+# print("---------- 2.生活缴费--50g。 ----------")
+# print("---------- 3.线下支付--100g。 ----------")
+# print("---------- 4.网络购票--80g 。 ----------")
+# print("---------- 5.共享单车--200g。 ----------")
+# print("--------------------------------------")
+#
+# count_emergy = 0
+#
+# while(count_emergy>=0):
+#     emergy = int(input("你输入你的环保行为："))
+#     if emergy == 1:
+#         count_emergy = count_emergy + 20
+#     elif emergy == 2:
+#         count_emergy += 50
+#     elif emergy == 3:
+#         count_emergy += 100
+#     elif emergy == 4:
+#         count_emergy += 80
+#     elif emergy == 5:
+#         count_emergy += 200
+#     elif emergy==0:
+#         break;
+#
+# if count_emergy >=500:
+#    print("恭喜你，你成功种了一棵树")
+# print(count_emergy)
 
 # 6、猜数字游戏，随机生成一个1到10之间的数(包括1和10)的数字作为基准数，玩家每次通过键盘输入一个数字，
 # 如果输入的数字和基准数字相同，则过关，否则重新输入。如果玩家输入-1，则表示退出游戏。
@@ -104,13 +104,6 @@ print(count_emergy)
 #        pass
 #     elif input_num == -1:
 #         break;
-
-
-
-
-
-
-
 
 
 # 7、编写程序，设置您的余额，流量和剩余通话时间。模拟10086自助查询系统的功能：输入1，显示您当前的余额；输入2，显示您当前剩余的流量，单位为G；输入3，您当前的剩余通话，单位为分钟；输入0，退出自助查询系统。
