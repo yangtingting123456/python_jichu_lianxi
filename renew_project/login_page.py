@@ -2,8 +2,8 @@ from selenium import webdriver
 import time
 import os
 #环境配置
-# chromedriver = "C:\\Users\\kcadmin\\AppData\\Local\\Google\\Chrome\\Application"
-# os.environ["webdriver.Chrome.driver"] = chromedriver
+chromedriver = "C:\\Users\\kcadmin\\AppData\\Local\\Google\\Chrome\\Application"
+os.environ["webdriver.Chrome.driver"] = chromedriver
 web_driver = webdriver.Chrome()  #创建浏览器驱动对象
 web_driver.implicitly_wait(30)
 #进入该网页，点击登录按钮，跳转到登录页面
