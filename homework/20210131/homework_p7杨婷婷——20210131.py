@@ -154,3 +154,5 @@ if a+b>c and a-b<c:
       print('a,b,c构成的是等边三角形')
     else:
       print('a,b,c构成是一般三角形')
+else:
+    print('不能构成三角形')
