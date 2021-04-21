@@ -1,20 +1,20 @@
 # Python考试试卷
 # 一、选择题（2分一题）
-# 1、python不支持的数据类型有  
-# A、char  B、int  C、float  D、list
+# 1、python不支持的数据类型有
+# A、char B、int C、floa D、list
 # 2、如下代码，结果是
-# x = “foo”  y = 2  
-# print(x+y) 
-# A.foo        B.foofoo  C.foo2   D.报错
+# x = “foo”
+# print(x+y)
+# A.foo    B.foofoo C.foo2 D.报错
 # 3、以下不能创建列表的是
-# A、dic1 = {}    B、dic2 = {123:345}   C、dic3 = {[1,2,3]:'uestc'}   D、dic3 = {(1,2,3):'uestc'}
+# A、dic1 = {}    B、dic2={123:345}   C、dic3{[1,2,3]:'uestc'}   D、dic3{(1,2,3):'uestc'}
 # 4、以下代码输出结果是：
-# Kvps = {‘1’:1,’2’:2}
-# theCopy = kvps
-# kvps[‘1’] = 5
-# sum = kvps[‘1’] + theCopy[‘1’] 
+# Kvps = {‘1’:1,’2’:2}
+# theCopy = kvps
+# kvps[‘1’] = 5
+# sum = kvps[‘1’] theCopy[‘1’]
 # Print(sum)
-# A.1      B.2              C.7     D.10
+# A.1 B.2 C.7   D.10
 # 5、以下何者是不合法的布尔表达式：
 # A.x in range(6)     B.3=a   C.e>5 and 4==f  D.(x-6)>5
 # 6、下列表达式的值为True的是
